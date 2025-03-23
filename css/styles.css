@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.row {
+  width: 100%;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.section {
+  background-color: #e5e5e5;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 40px 15px 15px 15px;
+  position: relative;
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 30px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+
+/* Section title background colors */
+.section:nth-child(1) .section-title {
+  background-color: #ffb6c1; /* Light pink */
+}
+
+.section:nth-child(2) .section-title {
+  background-color: #ff6347; /* Tomato */
+}
+
+.section:nth-child(3) .section-title {
+  background-color: #ffd700; /* Gold */
+}
+
+/* Mobile view (767px and below) */
+@media (max-width: 767px) {
+  .col-mobile-12 {
+    float: left;
+    width: 100%;
+  }
+}
+
+/* Tablet view (between 768px and 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-tablet-6 {
+    float: left;
+    width: 50%;
+  }
+
+  .col-tablet-12 {
+    float: left;
+    width: 100%;
+  }
+}
+
+/* Desktop view (992px and above) */
+@media (min-width: 992px) {
+  .col-desktop-4 {
+    float: left;
+    width: 33.33%;
+  }
+}
+
